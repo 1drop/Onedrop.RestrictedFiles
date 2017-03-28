@@ -1,0 +1,20 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "onedrop/restrictedfiles",
+    "require": {
+        "neos/flow": "*",
+        "neos/media-browser": "*",
+        "wwwision/privateresources": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onedrop\\RestrictedFiles\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Onedrop.RestrictedFiles"
+        }
+    }
+}

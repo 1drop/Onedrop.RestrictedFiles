@@ -1,0 +1,16 @@
+Neos:
+  Flow:
+    resource:
+      targets:
+        'protectedResourcesTarget':
+          targetOptions:
+            whitelistRoles: ['Neos.Neos:Editor']
+      collections:
+        'protectedResources':
+          storage: 'defaultPersistentResourcesStorage'
+          target: 'protectedResourcesTarget'
+
+Onedrop:
+  RestrictedFiles:
+    protectedCollection: 'protectedResources'
+    collectionNames: ['Protected']
