@@ -1,10 +1,20 @@
 Neos:
   Flow:
+    persistence:
+      doctrine:
+        eventListeners:
+          Onedrop\RestrictedFiles\Domain\EventListener\AssetEventListener:
+            events:
+              - prePersist
+              - preUpdate
+              - postFlush
+            listener: Onedrop\RestrictedFiles\Domain\EventListener\AssetEventListener
     resource:
       targets:
         'protectedResourcesTarget':
           targetOptions:
             whitelistRoles: ['Neos.Neos:Editor']
+            tokenLifetime: 60
       collections:
         'protectedResources':
           storage: 'defaultPersistentResourcesStorage'
