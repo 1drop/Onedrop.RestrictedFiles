@@ -24,3 +24,4 @@ Onedrop:
   RestrictedFiles:
     protectedCollection: 'protectedResources'
     collectionNames: ['Protected']
+    trackProtectedDownloads: true

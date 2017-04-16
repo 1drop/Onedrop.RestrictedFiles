@@ -89,7 +89,7 @@ class AssetEventListener
      * publishingTarget and changes the collectionName of the persistent resource in the database.
      * It reads from the local transient queue that has been filled by the pre-hooks.
      *
-     * @param LifecycleEventArgs $eventArgs
+     * @param PostFlushEventArgs $eventArgs
      *
      * @return void
      */
@@ -135,6 +135,7 @@ class AssetEventListener
      */
     protected function getAllThumbnailsForAsset(Asset $asset)
     {
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->thumbnailRepository->findByOriginalAsset($asset);
     }
 
@@ -167,6 +168,7 @@ class AssetEventListener
      * Therefore Flow will use the protectedPublishTarget to generate URLs for that resource.
      *
      * @param PersistentResource $resource
+     * @param string             $resourceIdentifier
      */
     protected function protectResource(PersistentResource $resource, $resourceIdentifier)
     {
