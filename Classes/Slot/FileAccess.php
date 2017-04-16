@@ -9,6 +9,7 @@ use Neos\Flow\Mvc\ActionRequest;
 use Neos\Flow\ObjectManagement\ObjectManagerInterface;
 use Neos\Flow\ResourceManagement\PersistentResource;
 use Neos\Flow\Http\Request as HttpRequest;
+use Neos\Flow\Security\Account;
 use Neos\Flow\Security\Context;
 use Neos\Flow\Security\Exception\AccessDeniedException;
 use Onedrop\RestrictedFiles\Domain\Model\DownloadCount;
@@ -54,7 +55,7 @@ class FileAccess
                 sprintf('You are not allowed to access the file %s', $resource->getFilename()),
                 1485716879
             );
-        } elseif ($this->trackProtectedDownloads) {
+        } elseif ($this->trackProtectedDownloads && $this->securityContext->getAccount() instanceof Account) {
             $downloadCount = new DownloadCount($resource, $this->securityContext->getAccount());
             $this->entityManager->persist($downloadCount);
             $this->entityManager->flush();
