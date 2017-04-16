@@ -3,9 +3,9 @@
     "type": "neos-package",
     "name": "onedrop/restrictedfiles",
     "require": {
-        "neos/flow": "*",
+        "neos/flow": "^4.0",
         "neos/media-browser": "*",
-        "wwwision/privateresources": "*"
+        "wwwision/privateresources": "~2.0"
     },
     "autoload": {
         "psr-4": {
