@@ -21,8 +21,8 @@ class DownloadCount
 {
     /**
      * @var PersistentResource
-     * @ORM\Column
      * @ORM\ManyToOne
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     protected $resource;
     /**
@@ -32,8 +32,8 @@ class DownloadCount
     protected $dateTime;
     /**
      * @var Account
-     * @ORM\Column
      * @ORM\ManyToOne
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     protected $account;
 
