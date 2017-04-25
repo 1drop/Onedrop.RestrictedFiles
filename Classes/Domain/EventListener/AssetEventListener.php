@@ -151,8 +151,12 @@ class AssetEventListener
         if ($asset->getResource()->getCollectionName() === $this->settings['protectedCollection']) {
             return;
         }
+        $collections = $asset->getAssetCollections();
+        if (!$collections instanceof ArrayCollection) {
+            return;
+        }
         /** @var AssetCollection $collection */
-        foreach ($asset->getAssetCollections() as $collection) {
+        foreach ($collections as $collection) {
             if (in_array($collection->getTitle(), $this->settings['collectionNames'])) {
                 $protected = true;
             }
