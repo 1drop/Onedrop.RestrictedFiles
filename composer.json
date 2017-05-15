@@ -3,7 +3,7 @@
     "type": "neos-package",
     "name": "onedrop/restrictedfiles",
     "require": {
-        "neos/flow": ">=4.0 <4.2",
+        "neos/flow": "4.*",
         "neos/media-browser": "*",
         "wwwision/privateresources": "~2.0"
     },
