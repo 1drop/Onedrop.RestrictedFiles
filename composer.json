@@ -4,7 +4,7 @@
     "name": "onedrop/restrictedfiles",
     "require": {
         "neos/media-browser": "*",
-        "wwwision/privateresources": "~2.0"
+        "wwwision/privateresources": "~3.0"
     },
     "autoload": {
         "psr-4": {
