@@ -1,0 +1,11 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'Onedrop.RestrictedFiles:Download':
+      matcher: 'method(Onedrop\RestrictedFiles\Slot\FileAccess->download())'
+
+roles:
+  'Neos.Neos:AbstractEditor':
+    privileges:
+      -
+        privilegeTarget: 'Onedrop.RestrictedFiles:Download'
+        permission: GRANT
