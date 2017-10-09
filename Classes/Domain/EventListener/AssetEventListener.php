@@ -1,5 +1,4 @@
 <?php
-
 namespace Onedrop\RestrictedFiles\Domain\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
@@ -50,7 +49,6 @@ class AssetEventListener
      * @Flow\Inject
      */
     protected $thumbnailRepository;
-
 
     /**
      * @param array $settings
@@ -206,6 +204,4 @@ class AssetEventListener
             }
         }
     }
-
-
 }

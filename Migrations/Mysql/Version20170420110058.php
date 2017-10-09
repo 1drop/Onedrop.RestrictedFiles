@@ -9,7 +9,6 @@ use Doctrine\DBAL\Schema\Schema;
  */
 class Version20170420110058 extends AbstractMigration
 {
-
     /**
      * @return string
      */
@@ -19,7 +18,7 @@ class Version20170420110058 extends AbstractMigration
     }
 
     /**
-     * @param Schema $schema
+     * @param  Schema $schema
      * @return void
      */
     public function up(Schema $schema)
@@ -34,7 +33,7 @@ class Version20170420110058 extends AbstractMigration
     }
 
     /**
-     * @param Schema $schema
+     * @param  Schema $schema
      * @return void
      */
     public function down(Schema $schema)

@@ -1,5 +1,4 @@
 <?php
-
 namespace Onedrop\RestrictedFiles\Domain\Model;
 
 use Neos\Flow\Annotations as Flow;
@@ -97,5 +96,4 @@ class DownloadCount
     {
         $this->account = $account;
     }
-
 }

@@ -14,16 +14,18 @@ use Wwwision\PrivateResources\Http\Component\ProtectedResourceComponent;
  */
 class Package extends BasePackage
 {
-
     /**
-     * @param Bootstrap $bootstrap
+     * @param  Bootstrap $bootstrap
      * @return void
      */
-    public function boot(Bootstrap $bootstrap) {
+    public function boot(Bootstrap $bootstrap)
+    {
         $dispatcher = $bootstrap->getSignalSlotDispatcher();
         $dispatcher->connect(
-            ProtectedResourceComponent::class, 'resourceServed',
-            FileAccess::class, 'checkTrackFileAccess'
+            ProtectedResourceComponent::class,
+            'resourceServed',
+            FileAccess::class,
+            'checkTrackFileAccess'
         );
     }
 }

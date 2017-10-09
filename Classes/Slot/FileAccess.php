@@ -1,7 +1,5 @@
 <?php
-
 namespace Onedrop\RestrictedFiles\Slot;
-
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Neos\Flow\Annotations as Flow;
@@ -34,7 +32,7 @@ class FileAccess
     protected $entityManager;
     /**
      * @Flow\InjectConfiguration(path="trackProtectedDownloadsByAccount")
-     * @var boolean
+     * @var bool
      */
     protected $trackProtectedDownloadsByAccount;
     /**
@@ -76,17 +74,15 @@ class FileAccess
      */
     public function download()
     {
-
     }
 
     /**
      * @Flow\Signal
-     * @param PersistentResource $resource
-     * @param HttpRequest        $httpRequest
+     * @param  PersistentResource $resource
+     * @param  HttpRequest        $httpRequest
      * @return void
      */
     protected function emitDownloadDenied(PersistentResource $resource, HttpRequest $httpRequest)
     {
     }
-
 }
