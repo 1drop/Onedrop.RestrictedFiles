@@ -1,0 +1,9 @@
+-
+  requestFilter: 'parentRequest.isPackage("Neos.Neos") && isFormat("html") && isPackage("Neos.Media.Browser")'
+  options:
+    layoutRootPaths:
+      'Neos.Media.Browser': 'resource://Neos.Media.Browser/Private/Layouts/Module'
+    partialRootPaths:
+      'Onedrop.RestrictedFiles': 'resource://Onedrop.RestrictedFiles/Private/Partials'
+      'Neos.Neos': 'resource://Neos.Neos/Private/Partials'
+      'Neos.Media.Browser': 'resource://Neos.Media.Browser/Private/Partials'
