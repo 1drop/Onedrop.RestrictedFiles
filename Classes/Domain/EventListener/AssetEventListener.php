@@ -1,6 +1,7 @@
 <?php
 namespace Onedrop\RestrictedFiles\Domain\EventListener;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PostFlushEventArgs;
 use Neos\Flow\Annotations as Flow;
@@ -150,7 +151,7 @@ class AssetEventListener
             return;
         }
         $collections = $asset->getAssetCollections();
-        if (!$collections instanceof ArrayCollection) {
+        if (!($collections instanceof ArrayCollection || is_array($collections) || $collections instanceof \Traversable)) {
             return;
         }
         /** @var AssetCollection $collection */
