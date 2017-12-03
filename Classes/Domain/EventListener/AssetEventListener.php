@@ -175,9 +175,6 @@ class AssetEventListener
      */
     protected function protectResource(PersistentResource $resource, $resourceIdentifier)
     {
-        $publicTarget = $this->resourceManager->getCollection(ResourceManager::DEFAULT_PERSISTENT_COLLECTION_NAME)->getTarget();
-        // The resource must be unpublished from the current target or it's still publicly accessible
-        $publicTarget->unpublishResource($resource);
         // todo: check if resource must be moved to different storage, currently only local disk is supported
         $this->doctrineService->runDql(
             'UPDATE Neos\Flow\ResourceManagement\PersistentResource r ' .
