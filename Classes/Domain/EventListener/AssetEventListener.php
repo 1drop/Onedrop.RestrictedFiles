@@ -41,11 +41,6 @@ class AssetEventListener
      */
     protected $doctrineService;
     /**
-     * @var LoggerInterface
-     * @Flow\Inject
-     */
-    protected $logger;
-    /**
      * @var ThumbnailRepository
      * @Flow\Inject
      */
